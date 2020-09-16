@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
                     if(this.authenticationService.currentUserValue.role==='Auditor'){
                         this.router.navigate(['/audit']);
                     }else{
-                        this.loading = false;
+                        this.router.navigate(['/home']);
                     }
                 },
                 error => {

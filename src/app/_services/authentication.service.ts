@@ -36,6 +36,7 @@ export class AuthenticationService
 
     logout(user)
     {
+        localStorage.removeItem('currentUser');
         let audit = {
             user: user.session.user,
             loginTime: user.session.loginTime,
